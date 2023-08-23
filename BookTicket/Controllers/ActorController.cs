@@ -14,7 +14,7 @@ namespace BookTicket.Controllers
         public IActionResult Index()
         {
             var data = _context.Actor.ToList();
-            return View();
+            return View(data);
         }
     }
 }
