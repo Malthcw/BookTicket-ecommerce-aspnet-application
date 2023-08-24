@@ -15,7 +15,7 @@ namespace BookTicket.Controllers
         public async Task<IActionResult> Index()
         {
             var allProducers = await _context.Producer.ToListAsync();
-            return View();
+            return View(allProducers);
         }
     }
 }

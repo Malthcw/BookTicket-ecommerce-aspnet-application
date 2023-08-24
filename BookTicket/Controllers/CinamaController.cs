@@ -15,7 +15,7 @@ namespace BookTicket.Controllers
         public async Task<IActionResult> Index()
         {
             var allCinamas = await _context.Cinama.ToListAsync();
-            return View();
+            return View(allCinamas);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace BookTicket.Controllers
         public async Task<IActionResult> Index()
         {
             var allMovies = await _context.Movie.ToListAsync();
-            return View();
+            return View(allMovies);
         }
     }
 }
