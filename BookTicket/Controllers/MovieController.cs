@@ -14,7 +14,7 @@ namespace BookTicket.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var allMovies = await _context.Movie.ToListAsync();
+            var allMovies = await _context.Movie.Include(n=>n.Cinama).OrderBy(n => n.Name).ToListAsync();
             return View(allMovies);
         }
     }
